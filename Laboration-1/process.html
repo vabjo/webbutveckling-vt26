@@ -23,18 +23,27 @@
       <section class="process-page">
         <h2>Arbetsprocess</h2>
         <article class="grid-container">
-          <h2 class="title-item1">Vite</h2>
+          <h2 class="title-item1">Upplägg</h2>
           <ul class="ul-item1">
-            <li>Starta vite projekt</li>
-            <li>ksfjlk</li>
+            <li>Vite installeras med <code>npm install --save-dev vite</code></li>
+            <li>Nytt projekt skapas med <code>npm create@latest</code>, där man namnger projektet, anger framework och väljer variant</li>
+            <li>Plugin installeras: Vite Image Optimizer med <code>npm install vite-plugin-image-optimizer --save-dev</code>, och Sharp med <code>npm install sharp --save-dev</code></li>
+            <li>För att kunna exportera fler sidor än index.html med Vite läggs sidorna index, photos och process till i <code>vite.config.js</code></li>
+            <li>I den filen konfigueras även vite image optimizer, så att bilderna komprimeras till en mindre filstorlek</li>
           </ul>
-          <h2 class="title-item2">Struktur</h2>
+          <h2 class="title-item2">Programmering</h2>
           <ul class="ul-item2">
-            <li></li>
+            <li>Projektet struktureras med HTML: sidorna index.html, photos.html och process.html skapas. Alla sidorna består av ett sidhuvud, huvudinnehåll och en sidfot</li>
+            <li>CSS används för att formge projektet: huvudsakligen används <code>display: flex</code> för att placera element, men även <code>display: grid</code> används för att skapa en layout för huvudinnehållet på sidorna <i>Bilder</i> och <i>Process</i></li>
+            <li>För responsivitet anges brytpunkterna <code>min-width: 480px</code> och <code>min-width: 768px</code></li>
+            <li>Ett litet program skrevs i JavaScript som visar en bild vid ett knapptryck på indexsidan</li>
           </ul>
-          <h2 class="title-item3">Formattering</h2>
+          <h2 class="title-item3">Publicering</h2>
           <ul class="ul-item3">
-            <li></li>
+            <li>Github används för versionhantering, och två grenar skapades: <i>main</i> för publicering och <i>dev</i> för utveckling</li>
+            <li>Vid publicering används Vite för att minifiera och optimera CSS och JavaScript koderna, samt skapandet av en mapp som innehåller de optimerade filerna som används för publicering</li>
+            <li>Vite optimerar även webbplatsens bilder genom Vite Image Optimizer pluginen, och placerar de förminskade filerna i publiceringsmappen</li>
+            <li>Slutligen publiceras webbplatsen genom Github pages från källförrådets huvudgren</li>
           </ul>
         </article>
       </section>
